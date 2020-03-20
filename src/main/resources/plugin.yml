@@ -1,4 +1,13 @@
-name: FFireworks
-version: ${project.version}
-main: io.github.garrettsummerfield.ffireworks.main
-api-version: 1.13
+name: FFireworksX
+author: garrettsummerfi3ld
+authors:
+  - InfernoSpirit
+main: io.github.garrettsummerfield.ffireworksx.Main
+version: 0.0.1
+commands:
+  flashingfireworks:
+    description: Main commands for FFireworksX.
+    usage: /<command>
+  ff:
+    description: Main commands for FFireworks.
+    usage: /<command>

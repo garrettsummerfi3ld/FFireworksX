@@ -1,4 +1,4 @@
-package io.github.garrettsummerfield.ffireworks;
+package io.github.garrettsummerfield.ffireworksx;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -14,16 +14,14 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
-import java.util.EventListener;
 
-
-public class main extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         getLogger().info("FlashingFireworks was enabled by console.");
 
         PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(this, this);
-        pm.registerEvents(new EventsListener(this), this);
+        pm.registerEvents(this, (Plugin) this);
+        pm.registerEvents(new EventsListener(this), (Plugin) this);
     }
 
 
@@ -62,7 +60,7 @@ public class main extends JavaPlugin implements Listener {
             if (args[0].equalsIgnoreCase("give")) {
 
                 if (player.hasPermission("flashingfireworks.give")) {
-
+                    /*     */
                     Player ptgt = player;
                     if (args.length >= 2 && args != null) {
 
@@ -82,7 +80,7 @@ public class main extends JavaPlugin implements Listener {
                     im.setDisplayName("§bFlashing Firework Snowball");
                     is.setItemMeta(im);
 
-                    player.getInventory().addItem(is);
+                    player.getInventory().addItem(new ItemStack[]{is});
                     player.sendMessage("§7Given " + ptgt.getName() + " §ax64 Flashing Firework Snowballs §7for them to use.");
                     ptgt.sendMessage("§7Here is §ax64 Flashing Firework Snowballs §7for you to use.");
                     return true;
