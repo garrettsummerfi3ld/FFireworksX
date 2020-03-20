@@ -1,0 +1,4 @@
+name: FFireworks
+version: ${project.version}
+main: io.github.garrettsummerfield.ffireworks.main
+api-version: 1.13
