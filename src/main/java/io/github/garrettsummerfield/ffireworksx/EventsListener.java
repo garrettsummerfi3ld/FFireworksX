@@ -93,7 +93,7 @@ public class EventsListener implements Listener { Main configGetter;
 
                 }
 
-            });
+            }(long)(i * 2.5D));
 
         }
 
