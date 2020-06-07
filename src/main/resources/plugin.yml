@@ -2,7 +2,7 @@ name: FFireworksX
 author: garrettsummerfi3ld
 authors:
   - InfernoSpirit
-main: io.github.garrettsummerfield.ffireworksx.Main
+main: io.garrettsummerfi3ld.ffireworksx.Main
 version: 0.0.1
 commands:
   flashingfireworks:

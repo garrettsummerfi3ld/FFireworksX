@@ -1,5 +1,5 @@
 
-package io.github.garrettsummerfield.ffireworksx;
+package io.garrettsummerfi3ld.ffireworksx;
 
 import org.bukkit.*;
 import org.bukkit.entity.Entity;
@@ -46,11 +46,12 @@ public class EventsListener implements Listener { Main configGetter;
 
                                 ItemMeta im = is.getItemMeta();
 
+                                assert im != null;
                                 im.setDisplayName("§bFlashing Firework Snowball");
 
                                 is.setItemMeta(im);
 
-                                p.getInventory().removeItem(new ItemStack[]{is});
+                                p.getInventory().removeItem(is);
 
                                 p.updateInventory();
 
@@ -73,7 +74,6 @@ public class EventsListener implements Listener { Main configGetter;
 
         for (int b = 0; b <= 250; b++) {
 
-            i = b;
 
             Bukkit.getServer().getScheduler().scheduleSyncDelayedTask((Plugin) this.configGetter, new Runnable() {
                 public void run() {
@@ -93,7 +93,8 @@ public class EventsListener implements Listener { Main configGetter;
 
                 }
 
-            }(long)(i * 2.5D));
+            });
+
 
         }
 

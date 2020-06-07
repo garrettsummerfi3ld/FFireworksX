@@ -1,4 +1,4 @@
-package io.github.garrettsummerfield.ffireworksx;
+package io.garrettsummerfi3ld.ffireworksx;
 
 import org.bukkit.Bukkit;
 import org.bukkit.FireworkEffect;
